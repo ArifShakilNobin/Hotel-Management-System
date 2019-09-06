@@ -1,0 +1,44 @@
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Services.dll.config
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Services.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Services.pdb
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\EntityFramework.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\EntityFramework.SqlServer.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Data.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Entities.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Data.pdb
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Data.dll.config
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Entities.pdb
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\HMS.Entities.dll.config
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\EntityFramework.xml
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\EntityFramework.SqlServer.xml
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Asp.net\Hotel Management System\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Asp.net\Hotel Management System\HMS.Services\obj\Debug\HMS.Services.csprojAssemblyReference.cache
+E:\Asp.net\Hotel Management System\HMS.Services\obj\Debug\HMS.Services.csproj.CoreCompileInputs.cache
+E:\Asp.net\Hotel Management System\HMS.Services\obj\Debug\HMS.Services.csproj.CopyComplete
+E:\Asp.net\Hotel Management System\HMS.Services\obj\Debug\HMS.Services.dll
+E:\Asp.net\Hotel Management System\HMS.Services\obj\Debug\HMS.Services.pdb
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Services.dll.config
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Services.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Services.pdb
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\EntityFramework.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\EntityFramework.SqlServer.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Data.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Entities.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Data.pdb
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Data.dll.config
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Entities.pdb
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\HMS.Entities.dll.config
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\EntityFramework.xml
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\EntityFramework.SqlServer.xml
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\obj\Debug\HMS.Services.csprojAssemblyReference.cache
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\obj\Debug\HMS.Services.csproj.CoreCompileInputs.cache
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\obj\Debug\HMS.Services.csproj.CopyComplete
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\obj\Debug\HMS.Services.dll
+E:\Asp.net\Hotel-Management-System--master\HMS.Services\obj\Debug\HMS.Services.pdb
