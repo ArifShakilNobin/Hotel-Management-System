@@ -16,10 +16,6 @@ namespace HMS.Areas.Dashboard.Controllers
         AccomodationService accomodationService = new AccomodationService();
         AccomodationPackagesService accomodationPackagesService = new AccomodationPackagesService();
 
-        // GET: Dashboard/Accomodation
-
-
-
 
         public ActionResult Index(string searchTerm, int? accomodationPackageID, int? page)
         {
@@ -43,7 +39,6 @@ namespace HMS.Areas.Dashboard.Controllers
 
             return View(model);
         }
-
 
 
         [HttpGet]
@@ -147,12 +142,6 @@ namespace HMS.Areas.Dashboard.Controllers
 
             return json;
         }
-
-
-
-
-
-
 
 
     }
