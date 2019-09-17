@@ -20,9 +20,7 @@ namespace HMS.Areas.Dashboard.ViewModels
 
     public class UserActionModel
     {
-
         public string ID { get; set; }
-
         public string FullName { get; set; }
         public string Email { get; set; }
         public string Username { get; set; }
@@ -34,6 +32,15 @@ namespace HMS.Areas.Dashboard.ViewModels
         //public string RoleID { get; set; }
         //public IdentityRole Role { get; set; }
         //public IEnumerable<IdentityRole> Roles { get; set; }
+    }
+
+
+    public class UserRolesModel
+    {
+        public string UserID { get; set; }
+
+        public IEnumerable<IdentityRole> UserRoles { get; set; }
+        public IEnumerable<IdentityRole> Roles { get; set; }
     }
 
 }
