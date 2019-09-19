@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col col-lg-12">
-        <h2>Users</h2>
+        <h2>Users(@Model.Pager.TotalItems)</h2>
         <hr />
     </div>
 
@@ -70,7 +70,8 @@
 </div>
 
 
-<script>$(".data-btn").click(function () {
+<script>
+    $(".data-btn").click(function () {
         $.ajax({
             url: $(this).attr("data-href"),
 

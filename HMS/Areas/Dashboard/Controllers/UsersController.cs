@@ -72,10 +72,10 @@ namespace HMS.Areas.Dashboard.Controllers
         AccomodationService accomodationService = new AccomodationService();
         AccomodationPackagesService accomodationPackagesService = new AccomodationPackagesService();
 
-        public ActionResult Index(string searchTerm, string roleID, int? page)
+        public async Task<ActionResult> Index(string searchTerm, string roleID, int? page)
         {
 
-            int recordSize = 1;
+            int recordSize = 5;
             page = page ?? 1;
 
             UsersListingModel model = new UsersListingModel();
@@ -85,9 +85,9 @@ namespace HMS.Areas.Dashboard.Controllers
 
             model.Roles = RoleManager.Roles.ToList();
 
-            model.Users = SearchUsers(searchTerm,roleID,page.Value,recordSize);
+            model.Users =await SearchUsers(searchTerm,roleID,page.Value,recordSize);
 
-            var totalRecords = SearchUsersCount(searchTerm, roleID);
+            var totalRecords =await SearchUsersCountAsync(searchTerm, roleID);
 
 
             model.Pager = new Pager(totalRecords, page, recordSize);
@@ -96,7 +96,7 @@ namespace HMS.Areas.Dashboard.Controllers
         }
 
         //Search Users
-        public IEnumerable<HMSUser> SearchUsers(string searchTerm, string roleID, int page, int recordSize)
+        public async Task<IEnumerable<HMSUser>> SearchUsers(string searchTerm, string roleID, int page, int recordSize)
         {
 
             var Users = UserManager.Users.AsQueryable();
@@ -108,7 +108,11 @@ namespace HMS.Areas.Dashboard.Controllers
 
             if (!string.IsNullOrEmpty(roleID))
             {
-                //Users = Users.Where(a => a.Email.ToLower().Contains(searchTerm.ToLower()));
+                var role =await RoleManager.FindByIdAsync(roleID);
+                var userIDs = role.Users.Select(x => x.UserId).ToList();
+
+                Users = Users.Where(x => userIDs.Contains(x.Id) );
+
             }
 
 
@@ -117,7 +121,7 @@ namespace HMS.Areas.Dashboard.Controllers
             return Users.OrderBy(x => x.Email).Skip(skip).Take(recordSize).ToList();
         }
 
-        public int SearchUsersCount(string searchTerm, string roleID)
+        public async Task<int> SearchUsersCountAsync(string searchTerm, string roleID)
         {
 
             var Users = UserManager.Users.AsQueryable();
@@ -129,7 +133,10 @@ namespace HMS.Areas.Dashboard.Controllers
 
             if (!string.IsNullOrEmpty(roleID))
             {
-                //Users = Users.Where(a => a.Email.ToLower().Contains(searchTerm.ToLower()));
+                var role = await RoleManager.FindByIdAsync(roleID);
+                var userIDs = role.Users.Select(x => x.UserId).ToList();
+
+                Users = Users.Where(x => userIDs.Contains(x.Id));
             }
 
 
@@ -247,9 +254,6 @@ namespace HMS.Areas.Dashboard.Controllers
         }
 
 
-
-
-
         [HttpGet]
         public async Task<ActionResult> UserRoles(string ID)
         {
@@ -297,16 +301,6 @@ namespace HMS.Areas.Dashboard.Controllers
 
             return json;
         }
-
-
-
-
-
-
-
-
-
-
 
 
     }
