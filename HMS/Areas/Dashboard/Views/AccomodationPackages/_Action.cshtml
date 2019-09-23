@@ -53,6 +53,12 @@
                     <input class="form-control" name="NoOfRoom" placeholder="Enter Accomodation No Of Room" value="@Model.NoOfRoom">
                 </div>
 
+                <div class="form-group">
+                    <label>Pictures</label>
+                    <input id="selectPictures" class="form-control" name="Pictures" type="file" multiple>
+                </div>
+
+
             </form>
 
             <div class="errordiv">
@@ -70,7 +76,8 @@
 }
 
 <script>
-    $("#actionButton").click(function () {
+
+     $("#actionButton").click(function () {
          $.ajax({
              url: '@Url.Action("Action","AccomodationPackages")',
              type:'post',
@@ -86,5 +93,33 @@
                      $(".errordiv").html(response.Message);
                  }
             });
+     });
+
+
+
+    //Upload Picture
+   $("#selectPictures").change(function () {
+
+        var pictures = this.files;
+
+        var formData = new FormData();
+
+        for (var i = 0; i < pictures.length; i++) {
+            formData.append("Picture", pictures[i]);
+        }
+
+		$.ajax({
+			url: '@Url.Action("UploadPictures", "Dashboard")',
+            type: "post",
+            data: formData,
+            processData: false,
+			contentType: false
+		})
+        .done(function (response) {
+            debugger;
+            });
     });
+
+
+
 </script>
