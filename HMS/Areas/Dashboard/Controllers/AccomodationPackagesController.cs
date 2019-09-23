@@ -14,6 +14,7 @@ namespace HMS.Areas.Dashboard.Controllers
     {
         AccomodationPackagesService accomodationPackagesService = new AccomodationPackagesService();
         AccomodationTypesService accomodationTypesService = new AccomodationTypesService();
+        DashboardService dashboardService = new DashboardService();
 
         // GET: Dashboard/AccomodationPackages
         public ActionResult Index(string searchTerm, int? accomodationTypeID, int? page)
@@ -52,6 +53,7 @@ namespace HMS.Areas.Dashboard.Controllers
                 model.Name = accomodationPackage.Name;
                 model.NoOfRoom = accomodationPackage.NoOfRoom;
                 model.FeePerNight = accomodationPackage.FeePerNight;
+                model.AccomodationPackagePictures = accomodationPackagesService.GetPicturesByAccomodationPackageID(accomodationPackage.ID);
             }
 
             model.AccomodationTypes = accomodationTypesService.GetAllAccomodationTypes();
@@ -85,6 +87,15 @@ namespace HMS.Areas.Dashboard.Controllers
                 accomodationPackage.Name = model.Name;
                 accomodationPackage.FeePerNight = model.FeePerNight;
                 accomodationPackage.NoOfRoom = model.NoOfRoom;
+
+                //model.PictureIDs = "90,67,23" = ["90", "67", "23"] = {90, 67, 23}
+                List<int> pictureIDs = model.pictureIDs.Split(',').Select(x => int.Parse(x)).ToList();
+                var pictures = dashboardService.GetPicturesByIDs(pictureIDs);
+
+                accomodationPackage.AccomodationPackagePictures = new List<AccomodationPackagePicture>();
+                accomodationPackage.AccomodationPackagePictures.AddRange(pictures.Select(x => new AccomodationPackagePicture() { PictureID = x.ID }));
+
+
                 result = accomodationPackagesService.SaveAccomodationPackage(accomodationPackage);
             }
 
