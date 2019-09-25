@@ -45,3 +45,4 @@ E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csproj.Co
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csproj.CopyComplete
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.dll
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.pdb
+E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csprojAssemblyReference.cache
