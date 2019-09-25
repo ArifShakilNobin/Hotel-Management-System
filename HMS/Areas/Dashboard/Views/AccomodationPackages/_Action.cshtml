@@ -90,8 +90,6 @@
 
         $("#pictureIDs").val(pictureIDs.join());
 
-        debugger;
-
 		$.ajax({
 			url: '@Url.Action("Action", "AccomodationPackages")',
 			type: "post",
@@ -107,6 +105,9 @@
 			}
 		});
     });
+
+
+    //upload Picture
 
     $("#selectPictures").change(function () {
 

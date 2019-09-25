@@ -15,6 +15,7 @@ namespace HMS.Areas.Dashboard.Controllers
     {
         AccomodationService accomodationService = new AccomodationService();
         AccomodationPackagesService accomodationPackagesService = new AccomodationPackagesService();
+        DashboardService dashboardService = new DashboardService();
 
 
         public ActionResult Index(string searchTerm, int? accomodationPackageID, int? page)
@@ -41,6 +42,7 @@ namespace HMS.Areas.Dashboard.Controllers
         }
 
 
+
         [HttpGet]
         public ActionResult Action(int? ID)
         {
@@ -53,7 +55,11 @@ namespace HMS.Areas.Dashboard.Controllers
                 model.AccomodationPackageID = accomodation.AccomodationPackageID;
                 model.Name = accomodation.Name;
                 model.Description = accomodation.Description;
-               
+
+
+                //picture upload work
+                model.AccomodationPictures = accomodationService.GetPicturesByAccomodationID(accomodation.ID);
+
             }
 
             model.AccomodationPackages = accomodationPackagesService.GetAllAccomodationPackages();
@@ -83,11 +89,23 @@ namespace HMS.Areas.Dashboard.Controllers
             else  //we are trying to create a record
             {
                 Accomodation accomodation = new Accomodation();
-
+                 
                 accomodation.AccomodationPackageID = model.AccomodationPackageID;
                 accomodation.Name = model.Name;
                 accomodation.Description = model.Description;
-                
+
+
+                //picture upload work
+                //model.PictureIDs = "90,67,23" = ["90", "67", "23"] = {90, 67, 23}
+                List<int> pictureIDs = model.pictureIDs.Split(',').Select(x => int.Parse(x)).ToList();
+                var pictures = dashboardService.GetPicturesByIDs(pictureIDs);
+
+                accomodation.AccomodationPictures = new List<AccomodationPicture>();
+                accomodation.AccomodationPictures.AddRange(pictures.Select(x => new AccomodationPicture() { PictureID = x.ID }));
+
+
+
+
                 result = accomodationService.SaveAccomodation(accomodation);
             }
 

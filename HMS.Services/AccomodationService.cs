@@ -127,7 +127,12 @@ namespace HMS.Services
         }
 
 
+        public List<AccomodationPicture> GetPicturesByAccomodationID(int accomodationID)
+        {
+            var context = new HMSContext();
 
+            return context.Accomodations.Find(accomodationID).AccomodationPictures.ToList();
+        }
 
 
     }

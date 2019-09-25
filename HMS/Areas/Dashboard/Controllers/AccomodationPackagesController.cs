@@ -53,7 +53,11 @@ namespace HMS.Areas.Dashboard.Controllers
                 model.Name = accomodationPackage.Name;
                 model.NoOfRoom = accomodationPackage.NoOfRoom;
                 model.FeePerNight = accomodationPackage.FeePerNight;
+
+
                 model.AccomodationPackagePictures = accomodationPackagesService.GetPicturesByAccomodationPackageID(accomodationPackage.ID);
+
+
             }
 
             model.AccomodationTypes = accomodationTypesService.GetAllAccomodationTypes();
