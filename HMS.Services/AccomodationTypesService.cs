@@ -36,7 +36,7 @@ namespace HMS.Services
         }
 
 
-        public AccomodationType GetAAccomodationTypeByID(int ID)
+        public AccomodationType GetAccomodationTypeByID(int ID)
         {
 
             var context = new HMSContext();

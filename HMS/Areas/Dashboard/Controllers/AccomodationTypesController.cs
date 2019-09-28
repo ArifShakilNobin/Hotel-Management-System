@@ -36,7 +36,7 @@ namespace HMS.Areas.Dashboard.Controllers
 
             if (ID.HasValue)//we are trying to edit a record
             {
-                var accomodationType = accomodationTypesService.GetAAccomodationTypeByID(ID.Value);
+                var accomodationType = accomodationTypesService.GetAccomodationTypeByID(ID.Value);
                 model.ID = accomodationType.ID;
                 model.Name = accomodationType.Name;
                 model.Description = accomodationType.Description;
@@ -54,7 +54,7 @@ namespace HMS.Areas.Dashboard.Controllers
 
             if (model.ID > 0)//we are trying to edit a record
             {
-                var accomodationType = accomodationTypesService.GetAAccomodationTypeByID(model.ID);
+                var accomodationType = accomodationTypesService.GetAccomodationTypeByID(model.ID);
                 accomodationType.Name = model.Name;
                 accomodationType.Description = model.Description;
 
@@ -88,7 +88,7 @@ namespace HMS.Areas.Dashboard.Controllers
         {
             AccomodationTypeActionModel model = new AccomodationTypeActionModel();
 
-            var accomodationType = accomodationTypesService.GetAAccomodationTypeByID(ID);
+            var accomodationType = accomodationTypesService.GetAccomodationTypeByID(ID);
             model.ID = accomodationType.ID;
             return PartialView("_Delete", model);
         }
@@ -102,7 +102,7 @@ namespace HMS.Areas.Dashboard.Controllers
 
             var result = false;
 
-            var accomodationType = accomodationTypesService.GetAAccomodationTypeByID(model.ID);
+            var accomodationType = accomodationTypesService.GetAccomodationTypeByID(model.ID);
 
             result = accomodationTypesService.DeleteAccomodationType(accomodationType);
 

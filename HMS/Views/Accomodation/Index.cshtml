@@ -1,4 +1,4 @@
-﻿@model HMS.ViewModels.AccomodationsViewModel
+﻿@model HMS.ViewModels.AccomodationViewModel
 
 <aside id="colorlib-hero">
     <div class="flexslider">
@@ -37,7 +37,7 @@
                         {
 
                             <li class="@(Model.SelectedAccomodationPackageID == accomodationPackage.ID? "active": string.Empty)">
-                                <a href="@Url.Action("Index","Accomodations", new {area = "", accomodationTypeID = Model.AccomodationType.ID ,accomodationPackageID = accomodationPackage.ID})">
+                                <a href="@Url.Action("Index","Accomodation", new {area = "", accomodationTypeID = Model.AccomodationType.ID ,accomodationPackageID = accomodationPackage.ID})">
                                     @accomodationPackage.Name
                                 </a>
                             </li>

@@ -19,7 +19,7 @@ namespace HMS.Controllers
             AccomodationPackagesService accomodationPackagesService = new AccomodationPackagesService();
 
             model.AccomodationTypes = service.GetAllAccomodationTypes();
-            //model.AccomodationPackages = accomodationPackagesService.GetAllAccomodationPackages();
+            model.AccomodationPackages = accomodationPackagesService.GetAllAccomodationPackages();
 
             return View(model);
         }

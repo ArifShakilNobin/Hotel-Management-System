@@ -6,7 +6,7 @@ using System.Web;
 
 namespace HMS.ViewModels
 {
-    public class AccomodationsViewModel
+    public class AccomodationViewModel
     {
         public AccomodationType AccomodationType { get; set; }
         public IEnumerable<AccomodationPackage> AccomodationPackages { get; set; }

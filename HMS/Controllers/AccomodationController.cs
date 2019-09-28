@@ -8,18 +8,17 @@ using System.Web.Mvc;
 
 namespace HMS.Controllers
 {
-    public class AccomodationsController : Controller
+    public class AccomodationController : Controller
     {
-
         AccomodationTypesService accomodationTypeservice = new AccomodationTypesService();
         AccomodationPackagesService accomodationPackageservice = new AccomodationPackagesService();
         AccomodationService accomodationservice = new AccomodationService();
-        public ActionResult Index(int accomodationTypeID,int? accomodationPackageID)
+        public ActionResult Index(int accomodationTypeID, int? accomodationPackageID)
         {
 
-            AccomodationsViewModel model = new AccomodationsViewModel();
+            AccomodationViewModel model = new AccomodationViewModel();
 
-            model.AccomodationType = accomodationTypeservice.GetAAccomodationTypeByID(accomodationTypeID);
+            model.AccomodationType = accomodationTypeservice.GetAccomodationTypeByID(accomodationTypeID);
 
             model.AccomodationPackages = accomodationPackageservice.GetAllAccomodationPackagesByAccomodationType(accomodationTypeID);
 
@@ -29,5 +28,16 @@ namespace HMS.Controllers
 
             return View(model);
         }
+
+
+        public ActionResult Details(int accomodationPackageID)
+        {
+            AccomodationPackageDetailsViewModel model = new AccomodationPackageDetailsViewModel();
+
+            model.AccomodationPackage = accomodationPackageservice.GetAccomodationPackageByID(accomodationPackageID);
+
+            return View(model);
+        }
+
     }
 }

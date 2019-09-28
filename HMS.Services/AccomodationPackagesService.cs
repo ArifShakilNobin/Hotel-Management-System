@@ -77,13 +77,8 @@ namespace HMS.Services
 
         public AccomodationPackage GetAccomodationPackageByID(int ID)
         {
-
-            using(var context = new HMSContext())
-            {
-
-                return context.AccomodationPackages.Find(ID);
-            }
-
+            var context = new HMSContext();
+            return context.AccomodationPackages.Find(ID);
         }
 
          
@@ -104,7 +99,15 @@ namespace HMS.Services
 
             var context = new HMSContext();
 
-            context.Entry(accomodationPackage).State = System.Data.Entity.EntityState.Modified;
+            var existingAccomodationPackage = context.AccomodationPackages.Find(accomodationPackage.ID);
+
+            context.AccomodationPackagePictures.RemoveRange(existingAccomodationPackage.AccomodationPackagePictures);
+
+            context.Entry(existingAccomodationPackage).CurrentValues.SetValues(accomodationPackage);
+
+            context.AccomodationPackagePictures.AddRange(accomodationPackage.AccomodationPackagePictures);
+
+            //context.Entry(accomodationPackage).State = System.Data.Entity.EntityState.Modified;
 
             return context.SaveChanges() > 0;
 
@@ -116,7 +119,11 @@ namespace HMS.Services
 
             var context = new HMSContext();
 
-            context.Entry(accomodationPackage).State = System.Data.Entity.EntityState.Deleted;
+            var existingAccomodationPackage = context.AccomodationPackages.Find(accomodationPackage.ID);
+
+            context.AccomodationPackagePictures.RemoveRange(existingAccomodationPackage.AccomodationPackagePictures);
+
+            context.Entry(existingAccomodationPackage).State = System.Data.Entity.EntityState.Deleted;
 
             return context.SaveChanges() > 0;
 

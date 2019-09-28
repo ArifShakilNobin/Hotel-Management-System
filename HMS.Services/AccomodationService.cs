@@ -79,11 +79,8 @@ namespace HMS.Services
         public Accomodation GetAccomodationByID(int ID)
         {
 
-            using (var context = new HMSContext())
-            {
-
-                return context.Accomodations.Find(ID);
-            }
+            var context = new HMSContext();
+            return context.Accomodations.Find(ID);
 
         }
 
@@ -107,9 +104,16 @@ namespace HMS.Services
 
             var context = new HMSContext();
 
-            context.Entry(accomodation).State = System.Data.Entity.EntityState.Modified;
+            var existingAccomodation = context.Accomodations.Find(accomodation.ID);
+
+            context.AccomodationPictures.RemoveRange(existingAccomodation.AccomodationPictures);
+            context.Entry(existingAccomodation).CurrentValues.SetValues(accomodation);
+            context.AccomodationPictures.AddRange(accomodation.AccomodationPictures);
+
+           // context.Entry(accomodation).State = System.Data.Entity.EntityState.Modified;
 
             return context.SaveChanges() > 0;
+
 
         }
 

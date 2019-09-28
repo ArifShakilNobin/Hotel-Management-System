@@ -14,18 +14,20 @@ namespace HMS
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-               name: "FEAccomodations",
-               url: "Accomodations",
-               defaults: new { area = "", controller = "Accomodations", action = "Index" },
+               name: "FEAccomodation",
+               url: "Accomodation",
+               defaults: new { area = "", controller = "Accomodation", action = "Index" },
                namespaces: new[] { "HMS.Controllers" }
            );
+
 
             routes.MapRoute(
                 name: "AccomodationPackageDetails",
                 url: "accomodation-package/{accomodationPackageID}",
-                defaults: new { area = "", controller = "Accomodations", action = "Details" },
+                defaults: new { area = "", controller = "Accomodation", action = "Details" },
                 namespaces: new[] { "HMS.Controllers" }
-);
+            );
+
 
             routes.MapRoute(
                 name: "CheckAvailability",

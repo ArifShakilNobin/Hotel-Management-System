@@ -74,13 +74,27 @@ namespace HMS.Areas.Dashboard.Controllers
 
             var result = false;
 
+
+            //picture upload work
+            //model.PictureIDs = "90,67,23" = ["90", "67", "23"] = {90, 67, 23}
+            List<int> pictureIDs = !string.IsNullOrEmpty(model.pictureIDs) ? model.pictureIDs.Split(',').Select(x => int.Parse(x)).ToList() : new List<int>();
+            var pictures = dashboardService.GetPicturesByIDs(pictureIDs);
+
+
+
             if (model.ID > 0)//we are trying to edit a record
             {
                 var accomodation = accomodationService.GetAccomodationByID(model.ID);
                 accomodation.AccomodationPackageID = model.AccomodationPackageID;
                 accomodation.Name = model.Name;
                 accomodation.Description = model.Description;
-                
+
+
+                accomodation.AccomodationPictures.Clear();
+                accomodation.AccomodationPictures.AddRange(pictures.Select(x => new AccomodationPicture() {AccomodationID =accomodation.ID, PictureID = x.ID }));
+
+
+
 
                 result = accomodationService.UpdateAccomodation(accomodation);
             }
@@ -94,10 +108,6 @@ namespace HMS.Areas.Dashboard.Controllers
 
 
                 //picture upload work
-                //model.PictureIDs = "90,67,23" = ["90", "67", "23"] = {90, 67, 23}
-                List<int> pictureIDs = model.pictureIDs.Split(',').Select(x => int.Parse(x)).ToList();
-                var pictures = dashboardService.GetPicturesByIDs(pictureIDs);
-
                 accomodation.AccomodationPictures = new List<AccomodationPicture>();
                 accomodation.AccomodationPictures.AddRange(pictures.Select(x => new AccomodationPicture() { PictureID = x.ID }));
 
