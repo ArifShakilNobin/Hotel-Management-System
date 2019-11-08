@@ -71,6 +71,14 @@
     <Compile Include="Migrations\201909221535274_addPictureEntity.Designer.cs">
       <DependentUpon>201909221535274_addPictureEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909280638057_NewPropertyAddInAccomodationPackage.cs" />
+    <Compile Include="Migrations\201909280638057_NewPropertyAddInAccomodationPackage.Designer.cs">
+      <DependentUpon>201909280638057_NewPropertyAddInAccomodationPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911080812317_BlogType.cs" />
+    <Compile Include="Migrations\201911080812317_BlogType.Designer.cs">
+      <DependentUpon>201911080812317_BlogType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909221535274_addPictureEntity.resx">
       <DependentUpon>201909221535274_addPictureEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909280638057_NewPropertyAddInAccomodationPackage.resx">
+      <DependentUpon>201909280638057_NewPropertyAddInAccomodationPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911080812317_BlogType.resx">
+      <DependentUpon>201911080812317_BlogType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

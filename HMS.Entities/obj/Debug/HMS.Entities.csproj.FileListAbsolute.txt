@@ -41,7 +41,7 @@ E:\Asp.net\Hotel-Management-System\HMS.Entities\bin\Debug\EntityFramework.xml
 E:\Asp.net\Hotel-Management-System\HMS.Entities\bin\Debug\EntityFramework.SqlServer.xml
 E:\Asp.net\Hotel-Management-System\HMS.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\Asp.net\Hotel-Management-System\HMS.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csproj.CoreCompileInputs.cache
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csproj.CopyComplete
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.dll
 E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.pdb
+E:\Asp.net\Hotel-Management-System\HMS.Entities\obj\Debug\HMS.Entities.csprojAssemblyReference.cache

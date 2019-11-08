@@ -73,7 +73,6 @@ E:\Asp.net\Hotel-Management-System\HMS.Services\bin\Debug\Microsoft.Owin.Securit
 E:\Asp.net\Hotel-Management-System\HMS.Services\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 E:\Asp.net\Hotel-Management-System\HMS.Services\bin\Debug\Newtonsoft.Json.xml
 E:\Asp.net\Hotel-Management-System\HMS.Services\obj\Debug\HMS.Services.csprojAssemblyReference.cache
-E:\Asp.net\Hotel-Management-System\HMS.Services\obj\Debug\HMS.Services.csproj.CoreCompileInputs.cache
 E:\Asp.net\Hotel-Management-System\HMS.Services\obj\Debug\HMS.Services.csproj.CopyComplete
 E:\Asp.net\Hotel-Management-System\HMS.Services\obj\Debug\HMS.Services.dll
 E:\Asp.net\Hotel-Management-System\HMS.Services\obj\Debug\HMS.Services.pdb

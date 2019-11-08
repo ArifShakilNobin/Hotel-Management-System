@@ -53,6 +53,7 @@ namespace HMS.Areas.Dashboard.Controllers
                 model.Name = accomodationPackage.Name;
                 model.NoOfRoom = accomodationPackage.NoOfRoom;
                 model.FeePerNight = accomodationPackage.FeePerNight;
+                model.Description = accomodationPackage.Description;
 
 
                 model.AccomodationPackagePictures = accomodationPackagesService.GetPicturesByAccomodationPackageID(accomodationPackage.ID);
@@ -88,6 +89,7 @@ namespace HMS.Areas.Dashboard.Controllers
                 accomodationPackage.Name = model.Name;
                 accomodationPackage.FeePerNight = model.FeePerNight;
                 accomodationPackage.NoOfRoom = model.NoOfRoom;
+                accomodationPackage.Description = model.Description;
 
                 accomodationPackage.AccomodationPackagePictures.Clear();
                 accomodationPackage.AccomodationPackagePictures.AddRange(pictures.Select(x => new AccomodationPackagePicture() { AccomodationPackageID=accomodationPackage.ID,PictureID = x.ID }));
@@ -103,6 +105,7 @@ namespace HMS.Areas.Dashboard.Controllers
                 accomodationPackage.Name = model.Name;
                 accomodationPackage.FeePerNight = model.FeePerNight;
                 accomodationPackage.NoOfRoom = model.NoOfRoom;
+                accomodationPackage.Description = model.Description;
 
                 
 

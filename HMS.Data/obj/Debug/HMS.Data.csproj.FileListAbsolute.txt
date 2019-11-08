@@ -61,8 +61,9 @@ E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.BasicE
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.IdentityFrameworkreference.resources
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.addUserProperties.resources
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.addPictureEntity.resources
+E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.NewPropertyAddInAccomodationPackage.resources
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.csproj.GenerateResource.cache
-E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.csproj.CoreCompileInputs.cache
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.csproj.CopyComplete
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.dll
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.pdb
+E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.BlogType.resources

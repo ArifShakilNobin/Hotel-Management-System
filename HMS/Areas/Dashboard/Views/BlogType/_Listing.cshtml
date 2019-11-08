@@ -1,0 +1,36 @@
+﻿@model HMS.Areas.Dashboard.ViewModels.BlogTypesListingModel
+
+@if (Model != null && Model.BlogTypes != null && Model.BlogTypes.Count() > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var blogType in Model.BlogTypes)
+            {
+                <tr>
+
+                    <td>@blogType.Name</td>
+                    <td>@blogType.Title</td>
+                    <td>@blogType.Description</td>
+                    <td>
+                        <button data-href="@Url.Action("Action","BlogType", new { ID =blogType.ID})" type="button" class="data-btn btn btn-primary" data-toggle="modal" data-target="#actionModal"><i class="fas fa-pen mr-1"></i>Edit</button>
+                        <button data-href="@Url.Action("Delete","BlogType", new { ID =blogType.ID})" type="button" class="data-btn btn btn-danger" data-toggle="modal" data-target="#actionModal"><i class="fas fa-trash"></i>Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Sorry! No record exists.
+    </div>
+}

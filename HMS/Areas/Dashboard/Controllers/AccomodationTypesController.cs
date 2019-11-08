@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace HMS.Areas.Dashboard.Controllers
 {
+    [Authorize]
     public class AccomodationTypesController : Controller
     {
 

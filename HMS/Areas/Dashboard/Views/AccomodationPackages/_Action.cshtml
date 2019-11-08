@@ -47,11 +47,26 @@
                     <label>FeePerNight</label>
                     <input class="form-control" name="FeePerNight" placeholder="Enter Fee Per Night." value="@Model.FeePerNight">
                 </div>
+
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" name="Description" placeholder="Enter Description" value="@Model.Description">Description</textarea>
+                    @*<input class="form-control" name="Description" placeholder="Enter Description" value="@Model.Description">*@
+                </div>
+
+
+
                 <div class="form-group">
                     <label>Pictures</label>
                     <input id="selectPictures" class="form-control" name="Pictures" type="file" multiple>
                     <input type="hidden" name="pictureIDs" id="pictureIDs" value="" />
                 </div>
+
+
+
+
+
                 <div id="picturesArea">
                     @if (Model.AccomodationPackagePictures != null && Model.AccomodationPackagePictures.Count > 0)
                     {

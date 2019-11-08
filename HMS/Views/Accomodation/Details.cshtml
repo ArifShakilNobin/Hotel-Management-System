@@ -41,7 +41,13 @@
                     <p>
                         @Model.AccomodationPackage.AccomodationType.Description
                     </p>
+                    <p>
+                        @Model.AccomodationPackage.Description
+                    </p>
                 </div>
+
+
+
                 <div class="amenities-img animate-box" style="height:400px; background-image: url(/images/site/@thumbnailURL);"></div>
 
                 @if (Model.AccomodationPackage.AccomodationPackagePictures != null && Model.AccomodationPackage.AccomodationPackagePictures.Count > 0)

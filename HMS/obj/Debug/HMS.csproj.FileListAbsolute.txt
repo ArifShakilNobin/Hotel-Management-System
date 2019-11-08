@@ -336,7 +336,6 @@ E:\Asp.net\Hotel-Management-System\HMS\bin\Microsoft.Owin.Security.MicrosoftAcco
 E:\Asp.net\Hotel-Management-System\HMS\bin\Microsoft.Owin.Security.OAuth.xml
 E:\Asp.net\Hotel-Management-System\HMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Asp.net\Hotel-Management-System\HMS\obj\Debug\HMS.csprojAssemblyReference.cache
-E:\Asp.net\Hotel-Management-System\HMS\obj\Debug\HMS.csproj.CoreCompileInputs.cache
 E:\Asp.net\Hotel-Management-System\HMS\obj\Debug\HMS.csproj.CopyComplete
 E:\Asp.net\Hotel-Management-System\HMS\obj\Debug\HMS.dll
 E:\Asp.net\Hotel-Management-System\HMS\obj\Debug\HMS.pdb
