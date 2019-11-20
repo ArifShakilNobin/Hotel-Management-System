@@ -67,3 +67,6 @@ E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.csproj.CopyComple
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.dll
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.pdb
 E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.BlogType.resources
+E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.Employee.resources
+E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.New_Employee.resources
+E:\Asp.net\Hotel-Management-System\HMS.Data\obj\Debug\HMS.Data.Migrations.last_update.resources

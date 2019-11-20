@@ -1,10 +1,6 @@
 ﻿using HMS.Areas.Dashboard.ViewModels;
 using HMS.Entities;
 using HMS.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace HMS.Areas.Dashboard.Controllers
@@ -41,6 +37,7 @@ namespace HMS.Areas.Dashboard.Controllers
                 model.ID = accomodationType.ID;
                 model.Name = accomodationType.Name;
                 model.Description = accomodationType.Description;
+                
             }
             return PartialView("_Action", model);
         }
@@ -58,6 +55,9 @@ namespace HMS.Areas.Dashboard.Controllers
                 var accomodationType = accomodationTypesService.GetAccomodationTypeByID(model.ID);
                 accomodationType.Name = model.Name;
                 accomodationType.Description = model.Description;
+               
+
+
 
                 result = accomodationTypesService.UpdateAccomodationType(accomodationType);
             }
@@ -65,8 +65,9 @@ namespace HMS.Areas.Dashboard.Controllers
             {
                 AccomodationType accomodationType = new AccomodationType();
 
-                accomodationType.Name = model.Name;
+                accomodationType.Name = model.Name; 
                 accomodationType.Description = model.Description;
+                
                 result = accomodationTypesService.SaveAccomodationType(accomodationType);
             }
 

@@ -170,14 +170,12 @@
     <Compile Include="Areas\Dashboard\Controllers\AccomodationController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\AccomodationPackagesController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\AccomodationTypesController.cs" />
-    <Compile Include="Areas\Dashboard\Controllers\BlogTypeController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\RolesController.cs" />
     <Compile Include="Areas\Dashboard\Controllers\UsersController.cs" />
     <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
     <Compile Include="Areas\Dashboard\ViewModels\AccomodationModels.cs" />
     <Compile Include="Areas\Dashboard\ViewModels\AccomodationPackagesModels.cs" />
-    <Compile Include="Areas\Dashboard\ViewModels\BlogTypesModels.cs" />
     <Compile Include="Areas\Dashboard\ViewModels\AccomodationTypesModels.cs" />
     <Compile Include="Areas\Dashboard\ViewModels\RolesViewModels.cs" />
     <Compile Include="Areas\Dashboard\ViewModels\UsersViewModels.cs" />
@@ -351,6 +349,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Dashboard\Models\" />
+    <Folder Include="Areas\Dashboard\Views\EmployeeTypes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\.DS_Store" />
@@ -452,6 +451,8 @@
     <Content Include="Areas\Dashboard\Views\BlogType\_Listing.cshtml" />
     <Content Include="Areas\Dashboard\Views\BlogType\_Action.cshtml" />
     <Content Include="Areas\Dashboard\Views\BlogType\_Delete.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Employee\Index.cshtml" />
+    <Content Include="Areas\Dashboard\Views\Employee\_Action.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Accomodation\Index.cshtml" />
     <Content Include="Views\Accomodation\Details.cshtml" />

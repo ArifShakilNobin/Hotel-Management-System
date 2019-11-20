@@ -77,7 +77,6 @@
   <ItemGroup>
     <Compile Include="AccomodationPackagesService.cs" />
     <Compile Include="AccomodationService.cs" />
-    <Compile Include="BlogTypesService.cs" />
     <Compile Include="AccomodationTypesService.cs" />
     <Compile Include="DashboardService.cs" />
     <Compile Include="HMSRolesManager.cs" />

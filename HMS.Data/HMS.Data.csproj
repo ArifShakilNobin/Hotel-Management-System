@@ -79,6 +79,18 @@
     <Compile Include="Migrations\201911080812317_BlogType.Designer.cs">
       <DependentUpon>201911080812317_BlogType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911190633492_Employee.cs" />
+    <Compile Include="Migrations\201911190633492_Employee.Designer.cs">
+      <DependentUpon>201911190633492_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911190643335_New_Employee.cs" />
+    <Compile Include="Migrations\201911190643335_New_Employee.Designer.cs">
+      <DependentUpon>201911190643335_New_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911200250307_last_update.cs" />
+    <Compile Include="Migrations\201911200250307_last_update.Designer.cs">
+      <DependentUpon>201911200250307_last_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -110,6 +122,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911080812317_BlogType.resx">
       <DependentUpon>201911080812317_BlogType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911190633492_Employee.resx">
+      <DependentUpon>201911190633492_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911190643335_New_Employee.resx">
+      <DependentUpon>201911190643335_New_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911200250307_last_update.resx">
+      <DependentUpon>201911200250307_last_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

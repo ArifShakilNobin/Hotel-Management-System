@@ -24,13 +24,13 @@ namespace HMS.Data
 
 
         public DbSet<AccomodationType> AccomodationTypes { get; set; }
-        public DbSet<BlogType> BlogTypes { get; set; }
         public DbSet<AccomodationPackage> AccomodationPackages { get; set; }
         public DbSet<AccomodationPackagePicture> AccomodationPackagePictures { get; set; }
         public DbSet<Accomodation> Accomodations { get; set; }
         public DbSet<AccomodationPicture> AccomodationPictures { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Picture> Pictures { get; set; }
+
 
 
     }
